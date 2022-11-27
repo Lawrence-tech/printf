@@ -10,7 +10,7 @@
 int print_bigS(va_list l, flags_t *f)
 {
 	int i, count = 0;
-	char *rest;
+	char *res;
 	char *s = va_arg(l, char *);
 
 	(void)f;
