@@ -3,6 +3,8 @@
 
 #include <stdio.h>
 #include <stdarg.h>
+#include <stdio.h>
+#include <unistd.h>
 
 /**
   *struct flags - struct containing flags to 'turn on' when a flag specifier
@@ -67,11 +69,9 @@ int _puts(char *str);
 int print_rot13(va_list l, flags_t *f);
 int print_rev(va_list l, flags_t *f);
 int print_bigS(va_list l, flags_t *f);
+int print_percent(va_list l, flags_t *f);
 
 /* print_address */
 int print_address(va_list l, flags_t *f);
-
-/* print_percent */
-int print_percent(va_list l, flags_t *f);
 
 #endif /*MAIN_H */
