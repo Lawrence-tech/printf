@@ -14,13 +14,14 @@
   *@hash: flag for the # character
   */
 
-tyedef struct flags
+typedef struct flags
 {
 	int plus;
 	int space;
 	int hash;
-} flags_t;
+} flags;
 
+typedef flags flags_t;
 /**
   *struct printHandler - struct to choose the right function depending on
   *the format specifier passed to _printf ()
@@ -31,7 +32,9 @@ typedef struct printHandler
 {
 	char c;
 	int (*f)(va_list ap, flags_t *f);
-} ph;
+} printHandler;
+
+typedef printHandler ph;
 
 /*print_nums */
 int print_int(va_list l, flags_t *f);
@@ -55,7 +58,7 @@ int _printf(const char *format, ...);
 int (*get_print(char s))(va_list, flags_t *);
 
 /* get_flag */
-int get_flag(char s, flag_t *f);
+int get_flag(char s, flags_t *f);
 
 /* print_alpha */
 int print_string(va_list l, flags_t *f);
