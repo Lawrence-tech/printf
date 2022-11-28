@@ -64,7 +64,7 @@ int print_rev(va_list l, flags_t *f)
   *Return: length of the printed string
   */
 
-int print_rot13(va_list l, flag_t *f)
+int print_rot13(va_list l, flags_t *f)
 {
 	int i, j;
 	char rot13[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVXYZ";
@@ -86,9 +86,10 @@ int print_rot13(va_list l, flag_t *f)
 		}
 	}
 	return (j);
+}
 
 /**
- * print_percent - prints a percent
+ *print_percent - prints a percent
  *@l: va_list args
  *@f: pointer to the struct
  *Return: no. of char printed
